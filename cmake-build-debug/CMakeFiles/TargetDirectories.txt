@@ -1,0 +1,3 @@
+/Users/wojtekbialecki/Library/CloudStorage/OneDrive-PolitechnikaWroclawska/studia/4 sem/aizo/projekt/cmake-build-debug/CMakeFiles/projekt.dir
+/Users/wojtekbialecki/Library/CloudStorage/OneDrive-PolitechnikaWroclawska/studia/4 sem/aizo/projekt/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/wojtekbialecki/Library/CloudStorage/OneDrive-PolitechnikaWroclawska/studia/4 sem/aizo/projekt/cmake-build-debug/CMakeFiles/rebuild_cache.dir

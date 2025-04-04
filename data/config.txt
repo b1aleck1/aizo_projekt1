@@ -1,0 +1,18 @@
+tryb test
+rozmiar 10
+typ_danych int
+uklad_tablicy losowo
+zrodlo_danych generuj
+algorytm quick
+pivot losowy
+shell_wzor 1
+
+
+# tryb: test lub symulacja
+# rozmiar: do wpisania w przypadku trybu test
+# typ_danych: int, float lub long
+# uklad_tablicy: losowo, 33, 66 ((33/66% posortowne), rosnaco, malejaco
+# zrodlo_danych: generuj lub ścieżka do pliku (data/dane.txt)
+# algorytm: wstawianie/kopcowanie/quick/shell
+# pivot: losowy, srodkowy, lewy, prawy (domyślny)
+# shell_wzor: 1 lub 2 (1 - Ciąg Shella (klasyczny), 2 - Ciąg Hibbarda)
