@@ -1,10 +1,10 @@
 tryb symulacja
 rozmiar 10
-typ_danych int
+typ_danych float
 uklad_tablicy losowo
 zrodlo_danych generuj
-algorytm quick
-pivot lewy
+algorytm kopcowanie
+pivot prawy
 shell_wzor 1
 
 

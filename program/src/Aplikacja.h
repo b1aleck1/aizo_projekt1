@@ -8,6 +8,7 @@
 #include <string>
 #include <iostream>
 #include <chrono>
+#include <type_traits>
 
 #include "Generowanie.h"
 #include "ObslugaPlikow.h"
@@ -99,12 +100,14 @@ void uruchomSymulacje() {
         return out;
     };
 
-    std::string nazwaPliku = folder + "/"
-        + format(algorytm) + "_"
-        + format(uklad) + "_"
-        + format(pivot) + "_"
-        + "shell" + std::to_string(shell_wzor)
-        + ".txt";
+        std::string typDanych = getTypDanych();
+
+        std::string nazwaPliku = folder + "/"
+            + format(algorytm) + "_"
+            + format(uklad) + "_"
+            + format(pivot) + "_"
+            + "shell" + std::to_string(shell_wzor) + "_"
+            + format(typDanych) + ".txt";
 
     std::ofstream plikWyniki(nazwaPliku);
     if (!plikWyniki) {
@@ -184,6 +187,13 @@ private:
     std::string zrodlo_danych;
     std::string pivot;
     int shell_wzor;
+
+    std::string getTypDanych() const {
+        if (std::is_same<T, int>::value) return "int";
+        else if (std::is_same<T, float>::value) return "float";
+        else if (std::is_same<T, long>::value) return "long";
+        else return "unknown";
+    }
 };
 
 #endif //APLIKACJA_H
