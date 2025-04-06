@@ -90,14 +90,29 @@ void uruchomSymulacje() {
     std::string folder = "wyniki";
     std::filesystem::create_directory(folder); // Tworzy folder, jeśli nie istnieje
 
-    std::string nazwaPliku = folder + "/" + algorytm + ".txt";
+    // Budowa nazwy pliku na podstawie parametrów
+    auto format = [](const std::string& s) {
+        std::string out = s;
+        for (char& c : out) {
+            if (c == ' ') c = '_';
+        }
+        return out;
+    };
+
+    std::string nazwaPliku = folder + "/"
+        + format(algorytm) + "_"
+        + format(uklad) + "_"
+        + format(pivot) + "_"
+        + "shell" + std::to_string(shell_wzor)
+        + ".txt";
+
     std::ofstream plikWyniki(nazwaPliku);
     if (!plikWyniki) {
         std::cerr << "Błąd: Nie można otworzyć pliku wyników!" << std::endl;
         return;
     }
 
-    // Nagłówek (bez rozmiarów)
+    // Nagłówek pliku
     plikWyniki << "Algorytm: " << algorytm
                << ", Źródło danych: " << zrodlo_danych
                << ", Układ: " << uklad
@@ -113,8 +128,8 @@ void uruchomSymulacje() {
     }
     plikWyniki << std::endl;
 
-    // Symulacja: 100 powtórzeń
-    for (int i = 0; i < 100; ++i) {
+    // Symulacja: 20 powtórzeń
+    for (int i = 0; i < 20; ++i) {
         for (int rozmiar : rozmiary) {
             T* tablica;
             Generator<T> generator(uklad);
@@ -151,7 +166,7 @@ void uruchomSymulacje() {
             auto end = std::chrono::high_resolution_clock::now();
             std::chrono::duration<double, std::milli> elapsed = end - start;
 
-            plikWyniki << std::fixed << std::setprecision(4) << elapsed.count() << "\t";
+            plikWyniki << std::fixed << std::setprecision(2) << elapsed.count() << " ms" << "\t";
 
             delete[] kopia;
             delete[] tablica;
@@ -162,7 +177,6 @@ void uruchomSymulacje() {
     plikWyniki.close();
     std::cout << "Symulacja zakończona. Wyniki zapisano w: " << nazwaPliku << std::endl;
 }
-
 private:
     int rozmiar;
     std::string uklad;

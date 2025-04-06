@@ -1,10 +1,10 @@
-tryb test
+tryb symulacja
 rozmiar 10
 typ_danych int
 uklad_tablicy losowo
 zrodlo_danych generuj
 algorytm quick
-pivot losowy
+pivot lewy
 shell_wzor 1
 
 
