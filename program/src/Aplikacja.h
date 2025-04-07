@@ -9,6 +9,7 @@
 #include <iostream>
 #include <chrono>
 #include <type_traits>
+#include <filesystem>
 
 #include "Generowanie.h"
 #include "ObslugaPlikow.h"
@@ -85,7 +86,7 @@ class Application {
         std::cout << "Czas sortowania: " << elapsed_millis.count() << " ms" << std::endl;
     }
 
-    #include <filesystem> // Do obsługi folderów (C++17)
+
 
 void uruchomSymulacje() {
     std::string folder = "wyniki";

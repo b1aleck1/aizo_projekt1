@@ -1,3 +1,3 @@
-/Users/wojtekbialecki/Library/CloudStorage/OneDrive-PolitechnikaWroclawska/studia/4 sem/aizo/projekt/cmake-build-debug/CMakeFiles/projekt.dir
-/Users/wojtekbialecki/Library/CloudStorage/OneDrive-PolitechnikaWroclawska/studia/4 sem/aizo/projekt/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/wojtekbialecki/Library/CloudStorage/OneDrive-PolitechnikaWroclawska/studia/4 sem/aizo/projekt/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Wojtek/Downloads/projekt-aizo1-WB/projekt/cmake-build-debug/CMakeFiles/projekt.dir
+C:/Users/Wojtek/Downloads/projekt-aizo1-WB/projekt/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Wojtek/Downloads/projekt-aizo1-WB/projekt/cmake-build-debug/CMakeFiles/rebuild_cache.dir

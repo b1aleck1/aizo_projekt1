@@ -1,6 +1,6 @@
-tryb symulacja
+tryb test
 rozmiar 10
-typ_danych float
+typ_danych int
 uklad_tablicy losowo
 zrodlo_danych generuj
 algorytm kopcowanie
