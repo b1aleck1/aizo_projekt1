@@ -52,7 +52,7 @@ class Generator {
         }
 
         // Obsługa RANDOM
-        T low = 1;
+        T low = 0;
         if (uklad == "33" || uklad == "66") {
             low = static_cast<T>(i + 1);
         }
